@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import AppRoutes from '@pages/AppRoutes';
 import reportWebVitals from './reportWebVitals';
 
@@ -19,15 +18,17 @@ import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 
 import theme from './theme';
+import { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
+const rootContainer = document.getElementById('root')
+const root = createRoot(rootContainer!)
+root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppRoutes />
     </ThemeProvider>
-  </React.StrictMode>,
-  document.querySelector('#root'),
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
