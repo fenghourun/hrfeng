@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "biome lint --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",

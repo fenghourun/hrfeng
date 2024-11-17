@@ -1,10 +1,10 @@
 import { MotionValue } from 'framer-motion';
-import create, { SetState, GetState } from 'zustand';
+import create, { type SetState, type GetState } from 'zustand';
 import shallow from 'zustand/shallow';
 
 
 import {
-  StoreApiWithSubscribeWithSelector,
+  type StoreApiWithSubscribeWithSelector,
   subscribeWithSelector,
 } from 'zustand/middleware';
 

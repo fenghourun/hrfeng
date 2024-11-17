@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material';
-import { motion, Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 import '@pages/home/Landing.scss';
 
@@ -8,7 +8,7 @@ const marqueeVariant: Variants = {
     x: [0, -1400],
     transition: {
       x: {
-        repeat: Infinity,
+        repeat: Number.POSITIVE_INFINITY,
         repeatType: 'loop',
         duration: 15,
         ease: 'linear',

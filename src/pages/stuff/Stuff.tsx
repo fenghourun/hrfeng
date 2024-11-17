@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 import "@pages/stuff/Stuff.scss";
 
@@ -77,13 +77,13 @@ const Simulations = (): JSX.Element => {
 							className="simulations-card-description-text"
 						>
 							Geometric representation of the pure states of a two level quantum
-							system.
+							system
 						</Typography>
 					</div>
 
 					<div
 						className="simulations-card-link"
-						onClick={(e) => navigate("/blochSphere")}
+						onClick={() => navigate("/blochSphere")}
 					>
 						View
 					</div>
@@ -105,7 +105,7 @@ const Simulations = (): JSX.Element => {
 
 					<div
 						className="simulations-card-link"
-						onClick={(e) => navigate("/notes")}
+						onClick={() => navigate("/notes")}
 					>
 						View
 					</div>

@@ -1,5 +1,5 @@
 import toast, { Toaster } from 'react-hot-toast';
-import { motion, Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Typography } from '@mui/material';
 
 import '@pages/contact/Contact.scss';

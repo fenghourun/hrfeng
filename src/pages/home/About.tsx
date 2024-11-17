@@ -1,4 +1,4 @@
-import { Variants, motion } from 'framer-motion';
+import { type Variants, motion } from 'framer-motion';
 import { Typography } from '@mui/material';
 
 import '@pages/home/About.scss';
