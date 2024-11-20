@@ -20,12 +20,9 @@ const TopBar = (): JSX.Element => {
 				<AppBar className="top-bar" position="fixed">
 					<Toolbar>
 						<Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-							<div
-								className="top-bar-home-button"
-								onClick={() => handleHomeButton()}
-							>
-								HRFENG
-							</div>
+							<Link to="/" className="top-bar-text">
+								<div className="top-bar-home-button">HRFENG</div>
+							</Link>
 						</Typography>
 						<Typography variant="h5" component="div">
 							<Link to="/contact" className="top-bar-text">
