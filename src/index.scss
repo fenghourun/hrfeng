@@ -7,7 +7,8 @@
 
 html {
   // ------------ Scrolling -------------
-  overflow: overlay; /* Make scrollbar track transparent */
+  overflow: overlay;
+  /* Make scrollbar track transparent */
   max-width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -24,15 +25,32 @@ body {
 a {
   color: #fff;
 }
+
+button {
+  background-color: transparent;
+  outline-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Rany';
+  font-weight: bold;
+}
+
 //  ======================= Custom Components ===============================
 
 .no-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently */
 }
 
 // ======================== HOME  ============================================
@@ -73,7 +91,8 @@ a {
 }
 
 .grabbable {
-  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;

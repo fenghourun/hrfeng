@@ -29,6 +29,7 @@
 .simulations-card:hover {
   border-color: white;
 }
+
 .simulations-card-description {
   display: flex;
   max-width: 80ch;
@@ -40,29 +41,29 @@
   max-width: 95ch;
 }
 
-.simulations-card-link {
+.simulations-card-button {
   max-height: 3rem;
-}
 
-.simulations-card-link:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
+  }
 
-.simulations-card-link:after {
-  content: '';
-  display: block;
-  width: 100%;
-  opacity: 0;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: scale(0, 1) 0.35s;
-  transform: scale(0, 1);
-}
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    opacity: 0;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: scale(0, 1) 0.35s;
+    transform: scale(0, 1);
+  }
 
-.simulations-card-link:hover:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  &:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

@@ -81,12 +81,13 @@ const Simulations = (): JSX.Element => {
 						</Typography>
 					</div>
 
-					<div
-						className="simulations-card-link"
+					<button
+						type="button"
+						className="simulations-card-button"
 						onClick={() => navigate("/blochSphere")}
 					>
 						View
-					</div>
+					</button>
 				</motion.div>
 				<motion.div className="simulations-card" variants={cardVariants}>
 					<div className="simulations-card-description">
@@ -103,12 +104,13 @@ const Simulations = (): JSX.Element => {
 						</Typography>
 					</div>
 
-					<div
-						className="simulations-card-link"
+					<button
+						type="button"
+						className="simulations-card-button"
 						onClick={() => navigate("/notes")}
 					>
 						View
-					</div>
+					</button>
 				</motion.div>
 			</motion.div>
 		</div>
