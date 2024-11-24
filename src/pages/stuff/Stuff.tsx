@@ -62,7 +62,7 @@ const Simulations = (): JSX.Element => {
 						fontSize={90}
 						textAlign="center"
 					>
-						{"('_>')"}
+						{"( •_•)"}
 					</Typography>
 				</div>
 				<motion.div className="simulations-card" variants={cardVariants}>

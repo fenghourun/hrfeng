@@ -1,10 +1,14 @@
-#notes-container {
+.notes-container {
   padding: 1em;
   margin-left: 10rem;
   margin-right: 10rem;
-}
 
-#markdown-container {
-  margin-right: 1em;
-  margin-left: 1em;
+  .markdown-container {
+    margin-right: 1em;
+    margin-left: 1em;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
 }

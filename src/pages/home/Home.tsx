@@ -5,7 +5,7 @@ import { useHomePageStore } from "@pages/home/HomeStore";
 import HomeCanvas from "@components/three/HomeCanvas";
 import LoadingScreen from "@components/react/LoadingScreen";
 import Landing from "@pages/home/Landing";
-import About from "@pages/home/About";
+// import About from "@pages/home/About";
 
 const Home = () => {
 	const { scrollYProgress } = useScroll();
@@ -16,8 +16,6 @@ const Home = () => {
 	}, [scrollYProgress]);
 
 	useEffect(() => {
-		console.log("home.tsx ==> Component mounted");
-
 		useHomePageStore.subscribe((state) => {
 			if (state.loadingProgress === 100) {
 				setIsLoading(false);
@@ -26,7 +24,6 @@ const Home = () => {
 
 		return () => {
 			useHomePageStore.destroy();
-			console.log("home.tsx ==> Component unmounted");
 		};
 	}, []);
 
@@ -41,7 +38,7 @@ const Home = () => {
 			) : (
 				<>
 					<Landing />
-					<About />
+					{/*<About /> */}
 				</>
 			)}
 		</motion.div>

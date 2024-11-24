@@ -45,14 +45,7 @@ const Landing = (): JSX.Element => {
 				animate="animate"
 				className="marquee"
 			>
-				<Typography
-					component="span"
-					fontWeight="bold"
-					fontSize={250}
-					letterSpacing={7}
-				>
-					{"WELCOME WELCOME WELCOME WELCOME"}
-				</Typography>
+				<h1 className="marqee-content">{"WELCOME WELCOME WELCOME WELCOME"}</h1>
 			</motion.div>
 
 			<motion.div

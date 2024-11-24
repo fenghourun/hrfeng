@@ -1,16 +1,20 @@
 .landing-page-container {
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-}
+  justify-content: space-around;
+  align-items: space-between;
 
-.marquee {
-  white-space: nowrap;
-  margin: 5rem;
-}
+  .marquee {
+    max-height: 50vh;
+    white-space: nowrap;
 
-.landing-caption {
-  padding: 5rem;
+    .marqee-content {
+      font-size: clamp(10vw, 15vw, 20vw);
+    }
+  }
+
+  .landing-caption {
+    padding: 5rem;
+  }
 }

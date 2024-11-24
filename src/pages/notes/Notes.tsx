@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Markdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
@@ -8,17 +8,9 @@ import "@pages/notes/Notes.scss";
 import qftPath from "./qft.md";
 import LoadingScreen from "@components/react/LoadingScreen";
 
-const Notes = (): JSX.Element => {
+const Notes = () => {
 	const [qftMd, setQftMd] = useState("");
 	const [isLoading, setIsLoading] = useState(true);
-
-	useEffect(() => {
-		console.log("pages/landing/Notes.tsx ==> Component Mounted");
-
-		return () => {
-			console.log("pages/landing/Notes.tsx ==> Component Unmounted");
-		};
-	}, []);
 
 	fetch(qftPath)
 		.then((response) => response.text())
@@ -29,7 +21,7 @@ const Notes = (): JSX.Element => {
 
 	return (
 		<div className="page-container">
-			<div id="notes-container">
+			<div className="notes-container">
 				{isLoading ? (
 					<LoadingScreen />
 				) : (
@@ -39,7 +31,7 @@ const Notes = (): JSX.Element => {
 							books on math and physics.
 						</Typography>
 
-						<div id="markdown-container">
+						<div className="markdown-container">
 							<Markdown
 								remarkPlugins={[remarkMath]}
 								rehypePlugins={[rehypeKatex]}
