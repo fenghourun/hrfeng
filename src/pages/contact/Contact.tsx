@@ -111,21 +111,24 @@ const Contact = (): JSX.Element => {
 						</Typography>
 					</button>
 				</motion.div>
-				<motion.div variants={contactItemVariant} className="contact-item">
-					<button
-						type="button"
-						onClick={() => {
-							window.open(
-								"https://drive.google.com/uc?export=download&id=1G-bLHBT0wdsffcOfYIis4Gd1a8gEGno2",
-								"_self",
-							);
-						}}
-					>
-						<Typography variant="button" fontSize={75} fontWeight="bold">
-							Resume
-						</Typography>
-					</button>
-				</motion.div>
+				{/*
+        <motion.div variants={contactItemVariant} className="contact-item">
+          <button
+            type="button"
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/uc?export=download&id=1G-bLHBT0wdsffcOfYIis4Gd1a8gEGno2",
+                "_self",
+              );
+            }}
+          >
+            <Typography variant="button" fontSize={75} fontWeight="bold">
+              Resume
+            </Typography>
+          </button>
+        </motion.div>
+
+          */}
 			</motion.div>
 		</div>
 	);
