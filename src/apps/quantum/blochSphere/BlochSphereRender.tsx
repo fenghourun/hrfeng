@@ -200,13 +200,19 @@ const BlochSphere = () => {
 			</mesh>
 
 			<mesh ref={xTextRef}>
-				<Text color="white"> x </Text>
+				<Text color="white" fontSize={0.15}>
+					x
+				</Text>
 			</mesh>
 			<mesh ref={yTextRef}>
-				<Text color="white"> y</Text>
+				<Text color="white" fontSize={0.15}>
+					y
+				</Text>
 			</mesh>
 			<mesh ref={zTextRef}>
-				<Text color="white"> z </Text>
+				<Text color="white" fontSize={0.15}>
+					z
+				</Text>
 			</mesh>
 		</>
 	);

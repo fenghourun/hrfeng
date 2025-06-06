@@ -1,7 +1,5 @@
 import type React from "react";
 
-import katex from "katex";
-
 import { styled } from "@mui/material/styles";
 import "./ParameterControls.scss";
 
@@ -10,6 +8,7 @@ import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
 
 import { useStore } from "@pages/stuff/blochSphere/BlochSphere";
+import Latex from "@components/base/Latex/Latex";
 
 const Input = styled(MuiInput)`
   width: 42px;
@@ -18,9 +17,6 @@ const Input = styled(MuiInput)`
 const ParameterControls = () => {
 	const phi = Math.floor((useStore((state) => state.phi) * 180) / Math.PI);
 	const theta = Math.floor((useStore((state) => state.theta) * 180) / Math.PI);
-
-	const katexPhiInnerHTML = { __html: katex.renderToString("\\phi") };
-	const katexThetaInnerHTML = { __html: katex.renderToString("\\theta") };
 
 	const handlePhiSliderChange = (
 		_event: Event,
@@ -60,10 +56,7 @@ const ParameterControls = () => {
 		<>
 			<Grid container spacing={2} alignItems="center">
 				<Grid item>
-					<div
-						id="input-theta-slider"
-						dangerouslySetInnerHTML={katexThetaInnerHTML}
-					/>
+					<Latex id="input-theta-slider" expression="\\theta" />
 				</Grid>
 				<Grid item xs>
 					<Slider
@@ -95,10 +88,7 @@ const ParameterControls = () => {
 
 			<Grid container spacing={2} alignItems="center">
 				<Grid item>
-					<div
-						id="input-phi-slider"
-						dangerouslySetInnerHTML={katexPhiInnerHTML}
-					/>
+					<Latex id="input-phi-slider" expression="\\phi" />
 				</Grid>
 				<Grid item xs>
 					<Slider
