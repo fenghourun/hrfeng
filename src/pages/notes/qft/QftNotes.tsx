@@ -3,7 +3,7 @@ import Markdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import "katex/dist/katex.min.css"; // `rehype-katex` does not import the CSS for you
-import "@pages/notes/Notes.scss";
+import "@pages/notes/qft/QftNotes.scss";
 import qftPath from "./qft.md";
 import LoadingScreen from "@components/react/LoadingScreen";
 
@@ -20,7 +20,7 @@ const QftNotes = () => {
 
 	return (
 		<div className="page-container">
-			<div className="notes-container">
+			<div className="qft-container">
 				{isLoading ? (
 					<LoadingScreen />
 				) : (
