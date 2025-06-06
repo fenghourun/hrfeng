@@ -13,6 +13,7 @@ import Contact from "@pages/contact/Contact";
 import Layout from "@components/react/Layout";
 import BlochSphere from "@pages/stuff/blochSphere/BlochSphere";
 import { AnimatePresence } from "framer-motion";
+import QftNotes from "./notes/qft/QftNotes";
 
 const AppRoutes = () => {
 	const location = useLocation();
@@ -28,6 +29,7 @@ const AppRoutes = () => {
 					<Route path="/" element={<Home />} />
 					<Route path="/stuff" element={<Stuff />} />
 					<Route path="/notes" element={<Notes />} />
+					<Route path="/qft" element={<QftNotes />} />
 					<Route path="/blochSphere" element={<BlochSphere />} />
 					<Route path="/contact" element={<Contact />} />
 				</Route>

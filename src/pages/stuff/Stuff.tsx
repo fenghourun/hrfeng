@@ -100,7 +100,8 @@ const Simulations = (): JSX.Element => {
 							letterSpacing={5}
 							className="simulations-card-description-text"
 						>
-							Under construction
+							These are my personal notes and problem set solutions for various
+							books on math and physics.
 						</Typography>
 					</div>
 

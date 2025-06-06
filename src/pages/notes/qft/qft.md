@@ -1,4 +1,4 @@
-# Quantum Field Theory
+# Introduction to Quantum Field Theory - Peskin & Schroeder
 
 Solutions to the end of chapter problems in the standard text 'Introduction to Quantum Field Theory' by Peskin & Schroeder. 
 I will be adding to this as I work through the text.

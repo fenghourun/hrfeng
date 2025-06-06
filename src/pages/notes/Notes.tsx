@@ -1,47 +1,84 @@
 import { useState } from "react";
-import Markdown from "react-markdown";
-import rehypeKatex from "rehype-katex";
-import remarkMath from "remark-math";
-import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { motion, type Variants } from "framer-motion";
 import "katex/dist/katex.min.css"; // `rehype-katex` does not import the CSS for you
 import "@pages/notes/Notes.scss";
-import qftPath from "./qft.md";
 import LoadingScreen from "@components/react/LoadingScreen";
+import { Typography } from "@mui/material";
+
+const qftVariants: Variants = {
+	initial: {
+		opacity: 0,
+	},
+	animate: {
+		opacity: 1,
+		transition: {
+			duration: 0.8,
+			staggerChildren: 0.2,
+		},
+	},
+	exit: {
+		opacity: 0,
+	},
+};
+
+const cardVariants: Variants = {
+	initial: {
+		opacity: 0,
+		x: 500,
+	},
+	animate: {
+		opacity: 1,
+		x: 0,
+		transition: {
+			duration: 0.8,
+		},
+	},
+};
 
 const Notes = () => {
-	const [qftMd, setQftMd] = useState("");
-	const [isLoading, setIsLoading] = useState(true);
-
-	fetch(qftPath)
-		.then((response) => response.text())
-		.then((text) => {
-			setQftMd(text);
-			setIsLoading(false);
-		});
+	const navigate = useNavigate();
 
 	return (
 		<div className="page-container">
-			<div className="notes-container">
-				{isLoading ? (
-					<LoadingScreen />
-				) : (
-					<>
-						<Typography fontSize={20}>
-							These are my personal notes and problem set solutions for various
-							books on math and physics.
-						</Typography>
-
-						<div className="markdown-container">
-							<Markdown
-								remarkPlugins={[remarkMath]}
-								rehypePlugins={[rehypeKatex]}
+			<motion.div
+				variants={qftVariants}
+				initial="initial"
+				animate="animate"
+				exit="exit"
+				id="qft-container"
+			>
+				<div className="notes-header">
+					<Typography
+						variant="h3"
+						fontWeight="bold"
+						fontSize={70}
+						textAlign="center"
+					>
+						{"Notes"}
+					</Typography>
+				</div>
+				<motion.div className="qft-card" variants={cardVariants}>
+					<button
+						type="button"
+						className="qft-card-button"
+						onClick={() => navigate("/qft")}
+					>
+						<div className="qft-card-description">
+							<Typography variant="h1" fontWeight="bold" fontSize={20}>
+								{"Introduction to Quantum Field Theory - Peskin & Schroeder"}
+							</Typography>
+							<Typography
+								variant="button"
+								fontSize={15}
+								className="qft-card-description-text"
 							>
-								{qftMd}
-							</Markdown>
+								End of chapter solutions
+							</Typography>
 						</div>
-					</>
-				)}
-			</div>
+					</button>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 };
