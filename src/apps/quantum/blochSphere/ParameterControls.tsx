@@ -8,7 +8,7 @@ import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
 
 import { useStore } from "@pages/stuff/blochSphere/BlochSphere";
-import Latex from "@components/base/Latex/Latex";
+import Latex from "@components/static/Latex/Latex";
 
 const Input = styled(MuiInput)`
   width: 42px;

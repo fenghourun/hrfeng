@@ -1,74 +1,22 @@
-// ====================== Top Bar =======================
 .top-bar {
   box-shadow: none !important;
   background: rgba(var(--background-color), 0.7) !important;
-}
 
-.top-bar-text {
-  text-decoration: none;
-}
+  .top-bar-text {
+    text-decoration: none;
+  }
 
-.top-bar-button {
-  position: relative;
-  margin: 1em;
-  text-align: center;
-  height: 30px;
-  user-select: none;
-}
+  .top-bar-button {
+    position: relative;
+    margin: 1em;
+    text-align: center;
+    height: 30px;
+    user-select: none;
+  }
 
-// ====================== Button ==========================
-.top-bar-button:hover {
-  cursor: pointer;
-}
-
-.top-bar-button::after {
-  content: '';
-
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.top-bar-button:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-
-// =========================== Home Button =================
-
-.top-bar-home-button {
-  position: relative;
-  user-select: none;
-  width: 6.5ch;
-}
-
-.top-bar-home-button:hover {
-  cursor: pointer;
-}
-
-.top-bar-home-button::after {
-  content: '';
-
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-
-  background-color: white;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.top-bar-home-button:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  .top-bar-home-button {
+    position: relative;
+    user-select: none;
+    width: 6.5ch;
+  }
 }

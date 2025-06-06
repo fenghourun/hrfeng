@@ -1,3 +1,8 @@
+@use "css/fonts.scss";
+@use "css/scrollbar.scss";
+@use "css/interactions.scss";
+@use "css/animations.scss";
+
 :root {
   --skew-amount: 15deg;
   --magic-number: 0.09719;
@@ -43,24 +48,6 @@ button {
   font-weight: bold;
 }
 
-//  ======================= Custom Components ===============================
-.no-select {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  -khtml-user-select: none;
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Old versions of Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently */
-}
-
-// ======================== HOME  ============================================
-
 .page-container {
   min-height: 100vh;
   min-width: 100vw;
@@ -78,77 +65,4 @@ button {
   top: 0;
   left: 0;
   z-index: -999;
-}
-
-// ======================== CUSTOM SCROLLBAR =======================================
-
-::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar {
-  width: 5px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(118, 110, 136);
-  border-radius: 2px;
-}
-
-.grabbable {
-  cursor: move;
-  /* fallback if grab cursor is unsupported */
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-/* (Optional) Apply a "closed-hand" cursor during drag operation. */
-.grabbable:active {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
-}
-
-// ========================================== FONTS ==========================
-@font-face {
-  font-family: 'Rany';
-  src: local('Rany'), url(./assets/fonts/Rany-Light.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Rany';
-  font-weight: lighter;
-  src: local('Rany'), url(./assets/fonts/Rany-Light.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Rany';
-  font-weight: bold;
-  src: local('Rany'), url(./assets/fonts/Rany-Bold.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Rany';
-  font-weight: normal;
-  font-style: italic;
-  src: local('Rany'),
-    url(./assets/fonts/Rany-Italic.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Rany';
-  font-weight: medium;
-  font-style: italic;
-  src: local('Rany'),
-    url(./assets/fonts/Rany-Medium-Italic.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Rany';
-  font-weight: bold;
-  font-style: italic;
-  src: local('Rany'),
-    url(./assets/fonts/Rany-Bold-Italic.otf) format('opentype');
 }

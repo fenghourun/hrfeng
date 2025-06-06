@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Rany';
+  src: local('Rany'), url(./assets/fonts/Rany-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Rany';
+  font-weight: lighter;
+  src: local('Rany'), url(./assets/fonts/Rany-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Rany';
+  font-weight: bold;
+  src: local('Rany'), url(./assets/fonts/Rany-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Rany';
+  font-weight: normal;
+  font-style: italic;
+  src: local('Rany'),
+    url(./assets/fonts/Rany-Italic.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Rany';
+  font-weight: medium;
+  font-style: italic;
+  src: local('Rany'),
+    url(./assets/fonts/Rany-Medium-Italic.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Rany';
+  font-weight: bold;
+  font-style: italic;
+  src: local('Rany'),
+    url(./assets/fonts/Rany-Bold-Italic.otf) format('opentype');
+}

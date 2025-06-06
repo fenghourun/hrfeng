@@ -83,7 +83,7 @@ const Simulations = (): JSX.Element => {
 
 					<button
 						type="button"
-						className="simulations-card-button"
+						className="animate-hover-center"
 						onClick={() => navigate("/blochSphere")}
 					>
 						View
@@ -107,7 +107,7 @@ const Simulations = (): JSX.Element => {
 
 					<button
 						type="button"
-						className="simulations-card-button"
+						className="animate-hover-center"
 						onClick={() => navigate("/notes")}
 					>
 						View
