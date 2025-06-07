@@ -1,43 +1,44 @@
-#simulations-container {
+.stuff-container {
   font-size: 2rem;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
   justify-content: center;
-}
 
-#simulations-header {
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.simulations-card {
-  min-height: 25vh;
-  width: 100%;
-  margin-right: 15vw;
-  padding: 1rem;
-  font-weight: bold;
-
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  border-bottom: 3px solid #4a535d;
-  transition: border 0.4s;
-
-  &:hover {
-    border-color: white;
+  .stuff-header {
+    padding: 1rem;
+    margin: 1rem;
   }
 
-  .simulations-card-description {
+  .stuff-card {
+    min-height: 25vh;
+    width: 100%;
+    margin-right: 15vw;
+    padding: 1rem;
+    font-weight: bold;
+
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border-bottom: 3px solid #4a535d;
+    transition: border 0.4s;
 
-  .simulations-card-description-text {
-    font-weight: normal;
-    ;
+    &:hover {
+      border-color: white;
+      cursor: pointer;
+    }
+
+    .stuff-card-description {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .stuff-card-description-text {
+      font-weight: normal;
+      ;
+    }
   }
 }

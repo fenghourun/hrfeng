@@ -5,7 +5,7 @@ import { motion, type Variants } from "framer-motion";
 
 import "@pages/stuff/Stuff.scss";
 
-const simulationsVariants: Variants = {
+const stuffVariants: Variants = {
 	initial: {
 		opacity: 0,
 	},
@@ -35,27 +35,27 @@ const cardVariants: Variants = {
 	},
 };
 
-const Simulations = (): JSX.Element => {
+const Stuff = (): JSX.Element => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
-		console.log("pages/landing/simulations.tsx ==> Component Mounted");
+		console.log("pages/landing/stuff.tsx ==> Component Mounted");
 
 		return () => {
-			console.log("pages/landing/simulations.tsx ==> Component Unmounted");
+			console.log("pages/landing/stuff.tsx ==> Component Unmounted");
 		};
 	}, []);
 
 	return (
 		<div className="page-container">
 			<motion.div
-				variants={simulationsVariants}
+				variants={stuffVariants}
 				initial="initial"
 				animate="animate"
 				exit="exit"
-				id="simulations-container"
+				className="stuff-container"
 			>
-				<div id="simulations-header">
+				<div className="stuff-header">
 					<Typography
 						variant="h3"
 						fontWeight="bold"
@@ -65,16 +65,17 @@ const Simulations = (): JSX.Element => {
 						{"( •_•)"}
 					</Typography>
 				</div>
+
 				<motion.button
-					className="simulations-card"
+					className="stuff-card"
 					variants={cardVariants}
 					onClick={() => navigate("/blochSphere")}
 				>
-					<div className="simulations-card-description">
+					<div className="stuff-card-description">
 						<Typography variant="h1" fontWeight="bold" fontSize={100}>
 							Bloch Sphere
 						</Typography>
-						<span className="simulations-card-description-text">
+						<span className="stuff-card-description-text">
 							Geometric representation of the pure states of a two level quantum
 							system
 						</span>
@@ -82,15 +83,15 @@ const Simulations = (): JSX.Element => {
 				</motion.button>
 
 				<motion.button
-					className="simulations-card"
+					className="stuff-card"
 					variants={cardVariants}
 					onClick={() => navigate("/notes")}
 				>
-					<div className="simulations-card-description">
+					<div className="stuff-card-description">
 						<Typography variant="h1" fontWeight="bold" fontSize={100}>
 							Notes
 						</Typography>
-						<span className="simulations-card-description-text">
+						<span className="stuff-card-description-text">
 							Personal notes and problem set solutions for various books on math
 							and physics.
 						</span>
@@ -101,4 +102,4 @@ const Simulations = (): JSX.Element => {
 	);
 };
 
-export default Simulations;
+export default Stuff;
