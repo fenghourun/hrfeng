@@ -1,5 +1,3 @@
-import katex from "katex";
-
 import { useState, useEffect } from "react";
 import { Button, Typography, Stack } from "@mui/material";
 import { useStore } from "@pages/stuff/blochSphere/BlochSphere";

@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { motion, type Variants } from "framer-motion";
-
 import "@pages/stuff/Stuff.scss";
 
 const stuffVariants: Variants = {
@@ -37,14 +35,6 @@ const cardVariants: Variants = {
 
 const Stuff = (): JSX.Element => {
 	const navigate = useNavigate();
-
-	useEffect(() => {
-		console.log("pages/landing/stuff.tsx ==> Component Mounted");
-
-		return () => {
-			console.log("pages/landing/stuff.tsx ==> Component Unmounted");
-		};
-	}, []);
 
 	return (
 		<div className="page-container">

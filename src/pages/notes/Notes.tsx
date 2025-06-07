@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, type Variants } from "framer-motion";
 import "katex/dist/katex.min.css"; // `rehype-katex` does not import the CSS for you
 import "@pages/notes/Notes.scss";
-import LoadingScreen from "@components/react/LoadingScreen";
 import { Typography } from "@mui/material";
 
 const qftVariants: Variants = {
