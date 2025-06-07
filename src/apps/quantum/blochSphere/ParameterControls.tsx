@@ -56,7 +56,7 @@ const ParameterControls = () => {
 		<>
 			<Grid container spacing={2} alignItems="center">
 				<Grid item>
-					<Latex id="input-theta-slider" expression="\\theta" />
+					<Latex id="input-theta-slider" expression={"\\theta"} />
 				</Grid>
 				<Grid item xs>
 					<Slider
@@ -88,7 +88,7 @@ const ParameterControls = () => {
 
 			<Grid container spacing={2} alignItems="center">
 				<Grid item>
-					<Latex id="input-phi-slider" expression="\\phi" />
+					<Latex id="input-phi-slider" expression={"\\phi"} />
 				</Grid>
 				<Grid item xs>
 					<Slider

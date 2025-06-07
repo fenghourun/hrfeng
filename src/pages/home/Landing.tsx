@@ -58,10 +58,10 @@ const Landing = (): JSX.Element => {
 					DAVID FENG
 				</Typography>
 				<Typography fontSize={20} letterSpacing={6}>
-					CURRENTLY SOFTWARE ENGINEER @FIRST PRINCIPLES
+					MACHINE LEARNING ENGINEER @META
 				</Typography>
 				<Typography fontSize={20} letterSpacing={6}>
-					BASED IN TORONTO
+					BASED IN NEW YORK
 				</Typography>
 			</motion.div>
 		</div>
