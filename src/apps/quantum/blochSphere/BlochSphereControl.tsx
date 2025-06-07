@@ -11,7 +11,6 @@ import ParameterControls from "@apps/quantum/blochSphere/ParameterControls";
 const BlochSphereControls = () => {
 	const [currentStateLatex, setCurrentStateLatex] = useState<string>("");
 
-	// ================================= LIFE CYCLE =========================================
 	useEffect(() => {
 		console.log("BlochSphereControl.tsx useEffect[] Mounted and subscribing");
 		useStore.subscribe(

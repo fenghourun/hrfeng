@@ -24,23 +24,20 @@
   justify-content: space-between;
   border-bottom: 3px solid #4a535d;
   transition: border 0.4s;
-}
 
-.simulations-card:hover {
-  border-color: white;
-}
+  &:hover {
+    border-color: white;
+  }
 
-.simulations-card-description {
-  display: flex;
-  max-width: 80ch;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-}
+  .simulations-card-description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-.simulations-card-description-text {
-  max-width: 95ch;
-}
-
-.simulations-card-button {
-  max-height: 3rem;
+  .simulations-card-description-text {
+    font-weight: normal;
+    ;
+  }
 }

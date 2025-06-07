@@ -65,54 +65,37 @@ const Simulations = (): JSX.Element => {
 						{"( •_•)"}
 					</Typography>
 				</div>
-				<motion.div className="simulations-card" variants={cardVariants}>
+				<motion.button
+					className="simulations-card"
+					variants={cardVariants}
+					onClick={() => navigate("/blochSphere")}
+				>
 					<div className="simulations-card-description">
 						<Typography variant="h1" fontWeight="bold" fontSize={100}>
 							Bloch Sphere
 						</Typography>
-						<Typography
-							variant="button"
-							fontSize={20}
-							letterSpacing={5}
-							className="simulations-card-description-text"
-						>
+						<span className="simulations-card-description-text">
 							Geometric representation of the pure states of a two level quantum
 							system
-						</Typography>
+						</span>
 					</div>
+				</motion.button>
 
-					<button
-						type="button"
-						className="animate-hover-center"
-						onClick={() => navigate("/blochSphere")}
-					>
-						View
-					</button>
-				</motion.div>
-				<motion.div className="simulations-card" variants={cardVariants}>
+				<motion.button
+					className="simulations-card"
+					variants={cardVariants}
+					onClick={() => navigate("/notes")}
+				>
 					<div className="simulations-card-description">
 						<Typography variant="h1" fontWeight="bold" fontSize={100}>
 							Notes
 						</Typography>
-						<Typography
-							variant="button"
-							fontSize={20}
-							letterSpacing={5}
-							className="simulations-card-description-text"
-						>
-							These are my personal notes and problem set solutions for various
-							books on math and physics.
-						</Typography>
+						<span className="simulations-card-description-text">
+							Personal notes and problem set solutions for various books on math
+							and physics.
+						</span>
 					</div>
-
-					<button
-						type="button"
-						className="animate-hover-center"
-						onClick={() => navigate("/notes")}
-					>
-						View
-					</button>
-				</motion.div>
+				</motion.button>
 			</motion.div>
 		</div>
 	);
